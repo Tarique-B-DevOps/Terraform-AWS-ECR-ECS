@@ -69,6 +69,18 @@ variable "task_memory" {
   default     = "2048"
 }
 
+variable "runtime_platform_operating_system_family" {
+  description = "Operating system family for the runtime platform"
+  type        = string
+  default     = "LINUX"
+}
+
+variable "runtime_platform_cpu_architecture" {
+  description = "CPU architecture for the runtime platform"
+  type        = string
+  default     = "X86_64"
+}
+
 variable "container_name" {
   description = "Name of the container"
   type        = string

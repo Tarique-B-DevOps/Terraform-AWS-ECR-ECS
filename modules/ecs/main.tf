@@ -36,6 +36,11 @@ resource "aws_ecs_task_definition" "task_def" {
   cpu                      = var.task_cpu
   memory                   = var.task_memory
 
+  runtime_platform {
+    operating_system_family = var.runtime_platform_operating_system_family
+    cpu_architecture        = var.runtime_platform_cpu_architecture
+  }
+
   container_definitions = jsonencode([
     {
       name      = var.container_name
