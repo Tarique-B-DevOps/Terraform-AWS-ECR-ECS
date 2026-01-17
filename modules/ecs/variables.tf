@@ -64,6 +64,12 @@ variable "force_new_deployment " {
 
 }
 
+variable "wait_for_steady_state" {
+  description = "Specify whether to wait for the steady state of the service"
+  type        = bool
+  default     = false
+}
+
 variable "task_cpu" {
   description = "CPU units for the task"
   type        = string

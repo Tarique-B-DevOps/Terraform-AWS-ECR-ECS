@@ -75,7 +75,8 @@ resource "aws_ecs_service" "service" {
   desired_count   = var.desired_count
   launch_type     = var.launch_type
 
-  force_new_deployment = var.force_new_deployment
+  force_new_deployment  = var.force_new_deployment
+  wait_for_steady_state = var.wait_for_steady_state
 
   network_configuration {
     subnets          = var.subnet_ids
