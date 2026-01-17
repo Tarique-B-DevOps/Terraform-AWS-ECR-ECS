@@ -57,7 +57,7 @@ variable "launch_type" {
   default     = "FARGATE"
 }
 
-variable "force_new_deployment " {
+variable "force_new_deployment" {
   description = "Specify whether to force a new deployment"
   type        = bool
   default     = false
